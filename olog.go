@@ -22,6 +22,11 @@ func SetDebug(isDebug bool) {
 	packageIsDebug = isDebug
 }
 
+// SetFlags sets the output flags for the standard logger.
+func SetFlags(flag int) {
+	log.SetFlags(flag)
+}
+
 // Printf 格式化输出日志
 func Printf(format string, v ...interface{}) {
 	if packageIsDebug {
