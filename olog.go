@@ -30,7 +30,6 @@ func SetFlags(flag int) {
 // Printf 格式化输出日志
 func Printf(format string, v ...interface{}) {
 	if packageIsDebug {
-		log.SetFlags(log.Ldate | log.Ltime | log.Lmicroseconds)
 		log.Printf(format, v...)
 	}
 }
@@ -38,7 +37,6 @@ func Printf(format string, v ...interface{}) {
 // Println 输出并换行
 func Println(v ...interface{}) {
 	if packageIsDebug {
-		log.SetFlags(log.Ldate | log.Ltime | log.Lmicroseconds)
 		log.Println(v...)
 	}
 }
